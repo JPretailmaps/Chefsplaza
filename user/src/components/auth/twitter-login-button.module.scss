@@ -1,0 +1,42 @@
+.twitter-button.btn-login {
+  background-color: #CCFF66 !important;
+  padding: 5px 12px;
+  border-radius: 25px;
+  width: 100%;
+  height: 48px;
+  font-weight: bold;
+
+  .sign-in-twitter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px !important;
+    font-weight: bold; 
+
+  p {
+    color: #fff
+  }
+    
+  .icon-twitter {
+    font-size: 35px;
+    position: absolute;
+    left: 20px;
+
+    :global .anticon-custom {
+      font-size: 35px;
+    }
+  }
+}
+  
+
+  img {
+    height: 18px;
+    width: auto;
+    margin-right: 5px;
+    margin-bottom: -4px;
+  }
+  :global .anticon {
+    font-size: 18px;
+    margin-right: 5px;
+  }
+}

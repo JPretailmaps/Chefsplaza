@@ -1,0 +1,14 @@
+.avatar-uploader :global .ant-upload {
+  background: none !important; 
+  border: none !important;
+  width: 50px; 
+  height: auto; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .ant-upload-select {
+    width: 2px;
+  }
+}
+

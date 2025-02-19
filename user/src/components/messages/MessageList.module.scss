@@ -1,0 +1,66 @@
+.message-list {
+  height: 100%;
+  width: 100%;
+  position: relative;
+
+  .mess-recipient {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid var(--colorGray);
+    padding: 5px;
+
+    .recipient {
+      text-transform: capitalize;
+      color: var(--colorGrey);
+      cursor: pointer;
+
+      [class~="ant-avatar"] {
+        width: 30px;
+        height: 30px;
+        margin-right: 5px;
+      }
+
+      [class~="anticon"] {
+        color: var(--colorPrimary);
+        font-size: 14px;
+        margin-left: 2px;
+      }
+
+      &:hover {
+        opacity: 0.9;
+      }
+    }
+
+    .close-btn {
+      background-color: unset;
+      border: none;
+      font-size: 18px;
+      display: none;
+
+      @media all and (max-width: 550px) {
+        display: block;
+        line-height: 10px;
+        color: var(--colorBlack);
+      }
+    }
+  }
+
+  .message-list-container {
+    padding: 0 10px 30px;
+    overflow-y: auto;
+    max-height: calc(100% - 90px);
+
+    .sub-text {
+      text-align: center;
+      color: var(--colorError);
+      padding: 10px;
+      font-size: 16px;
+      cursor: pointer;
+
+      @media all and (max-width: 550px) {
+        font-size: 14px;
+      }
+    }
+  }
+}

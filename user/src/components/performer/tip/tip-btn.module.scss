@@ -1,0 +1,25 @@
+.tip-btn.action-btn {
+  padding: 5px 10px;
+  background-color: transparent;
+  outline: none;
+  box-shadow: none;
+  border: unset;
+  color: var(--colorBlack);
+
+  :global .anticon {
+    font-size: 20px;
+  }
+
+  .txt {
+    margin-left: 5px;
+  }
+
+  &:hover,
+  &.active {
+    color: var(--colorPrimaryLight);
+  }
+
+  &:disabled {
+    background-color: transparent
+  }
+}

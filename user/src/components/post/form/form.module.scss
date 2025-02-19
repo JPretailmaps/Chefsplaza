@@ -1,0 +1,126 @@
+.feed-form {
+  background-color: var(--colorLightBlue);
+  padding: 10px;
+  width: 600px;
+  max-width: calc(100% - 20px);
+  margin: 20px auto;
+  border-radius: 6px;
+
+  .input-f-desc {
+    position: relative;
+
+    .grp-emotions {
+      z-index: 1;
+      position: absolute;
+      bottom: 5px;
+      top: unset;
+      right: 5px;
+      cursor: pointer;
+
+      :global .anticon {
+        font-size: 22px;
+        color: var(--colorPrimaryLight);
+      }
+    }
+
+    :global .ant-row .ant-col {
+      padding: 15px;
+    }
+  }
+
+  .audio-wrapper {
+    margin: 40px 0 10px;
+    position: relative;
+    max-width: 300px;
+
+    .audio-file {}
+
+    .audio-remove {
+      position: absolute;
+      right: 0;
+      bottom: calc(100% + 5px);
+    }
+  }
+
+  .audio-actions {
+    display: flex;
+
+    .audio-upload-btn {
+      margin: 0 10px;
+    }
+  }
+
+  .thumb-previews {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid var(--colorPrimaryLight);
+
+    :global {
+      .ant-btn {
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        z-index: 1;
+      }
+
+      .ant-image {
+        height: 185px;
+        width: 100%;
+
+        img {
+          object-fit: cover;
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+  }
+
+  .teaser-previews {
+    position: relative;
+    height: 185px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--colorLightGrey);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+    border-radius: 12px;
+    border: 1px solid var(--colorPrimaryLight);
+
+    :global .anticon-play-circle {
+      color: var(--colorPrimary);
+      font-size: 32px;
+    }
+
+    .f-remove {
+      position: absolute;
+      right: 5px;
+      top: 5px;
+      z-index: 1;
+    }
+
+  }
+
+
+  .submit-btns {
+    display: flex;
+    margin: 15px 0;
+    padding: 0 10px;
+    gap: 20px;
+
+    .submit-btn {
+      margin-top: 5px;
+    }
+  }
+}
+
+[data-theme="dark"] .feed-form {
+  :global .ant-radio-wrapper {
+    color: var(--colorBlack);
+  }
+}

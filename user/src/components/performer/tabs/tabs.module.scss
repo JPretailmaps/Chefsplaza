@@ -1,0 +1,77 @@
+.account_tabs {
+  margin-top: 30px;
+  :global {
+
+    .ant-tabs-tab.ant-tabs-tab-active {
+      border-right: 1px solid;
+      border-left: 1px solid;
+      border-bottom: none !important;
+    }
+    
+    .ant-tabs-nav {
+      &:before {
+        border-bottom: none;
+      }
+    
+      .ant-tabs-tab {
+        width: 50%;
+        border-bottom: 1px solid;
+        font-size: 15px;
+        font-weight: 600;
+        color: var(--colorGray);
+        justify-content: center;
+        margin: 0;
+        padding: 8px 25px;
+
+        @media screen and (max-width: 550px) {
+          font-size: 12px;
+          padding: 8px 15px;
+        }
+      }
+    }
+    
+    .ant-tabs-ink-bar {
+      bottom: unset !important;
+      top: 0;
+      background-color: var(--colorGray);
+      height: 1px !important;
+    }
+    
+    .ant-tabs-nav-wrap {
+      padding: 0 30px;
+    
+      &::before {
+        opacity: 1;
+        box-shadow: none;
+        border-bottom: 1px solid var(--colorGray);
+      }
+    
+      &::after {
+        opacity: 1;
+        box-shadow: none;
+        border-bottom: 1px solid var(--colorGray);
+      }
+    
+      @media screen and (max-width: 550px) {
+        padding: 0;
+        &::before {
+          opacity: 0;
+        }
+        &::after {
+          opacity: 0;
+        }
+      }
+    }
+    
+    .ant-tabs-nav-list {
+      width: 100%;
+    }
+    
+    .ant-tabs-content-holder {
+      .ant-tabs-tabpane.ant-tabs-tabpane-active {
+        overflow: none;
+        max-height: none;
+      }
+    }
+  }
+}

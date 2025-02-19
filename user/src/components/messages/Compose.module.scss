@@ -1,0 +1,127 @@
+.compose-container {
+  position: absolute;
+  width: calc(100% + 2px);
+  bottom: -1px;
+  left: -1px;
+  border: 1px solid var(--colorGray);
+  background-color: var(--colorWhite);
+
+  .compose-chat {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .toolbar-button {
+    color: var(--colorGrey);
+    margin-left: 15px;
+  }
+
+  .toolbar-button:hover {
+    color: var(--colorGrey);
+  }
+
+  .compose-input {
+    flex: 1;
+    border: none;
+    font-size: 14px;
+    height: 48px;
+    background: none;
+    color: var(--colorBlack);
+    outline: thin;
+    padding: 5px 10px;
+    resize: none;
+
+    @media screen and (max-width: 550px) {
+      font-size: 12px;
+    }
+  }
+
+  .compose-input::placeholder {
+    opacity: 0.3;
+  }
+
+  .grp-icons {
+    width: 48px;
+    height: 48px;
+    cursor: pointer;
+    font-size: 22px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--colorDarkGrey);
+    background: none;
+    border: none;
+    box-shadow: none;
+    outline: none;
+    position: relative;
+
+    :global .emoji-picker {
+      visibility: hidden;
+      opacity: 0;
+      z-index: -1;
+      bottom: 100%;
+      position: absolute;
+      transition: opacity 0.5s ease-in-out;
+    }
+
+    &:hover {
+      opacity: 1;
+
+      :global .emoji-picker {
+        visibility: visible;
+        opacity: 1;
+        z-index: 1;
+
+        @media screen and (max-width: 550px) {
+          right: -85px;
+        }
+      }
+    }
+
+    &.active {
+      color: var(--colorPrimary);
+    }
+  }
+
+  .grp-send {
+    height: 48px;
+    background: var(--colorPrimaryLight);
+    padding: 7px 15px;
+    border-radius: 0;
+    border: none;
+
+    [class~="anticon"] {
+      font-size: 18px;
+      color: #fff;
+      transform: rotate(-45deg);
+    }
+
+    &:hover {
+      background: var(--colorPrimary);
+    }
+
+    @media screen and (max-width: 550px) {
+      padding: 8px 15px;
+    }
+  }
+
+  @media screen and (max-width: 550px) {
+    position: fixed;
+  }
+}
+
+
+[data-theme="dark"] .compose-container {
+
+  .compose-input {
+    color: var(--colorGrey);
+
+    &::placeholder {
+      color: var(--colorBlack);
+    }
+  }
+
+  .grp-icons {
+    color: #fff;
+  }
+}

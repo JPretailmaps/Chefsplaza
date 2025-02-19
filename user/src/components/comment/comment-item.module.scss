@@ -1,0 +1,153 @@
+.cmt-item {
+  display: flex;
+  margin-bottom: 15px;
+  padding: 10px;
+  border-bottom: 1px solid var(--colorLightGrey);
+
+  &:last-child {
+    border: 0;
+  }
+
+  img {
+    margin-top: 10px;
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+
+  :global .cmt-content {
+    margin-top: 5px;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    padding-left: 10px;
+
+    .cmt-user {
+      font-size: 13px;
+      font-weight: 600;
+      display: flex;
+      justify-content: space-between;
+
+      .cmt-time {
+        color: var(--colorDarkGrey);
+        font-size: 10px;
+        font-weight: normal;
+        margin-left: 20px;
+      }
+    }
+
+    .cmt-action {
+      margin-bottom: 5px;
+
+      .react-btn {
+        cursor: pointer;
+        background-color: unset;
+        border: unset;
+
+        &.active {
+          color: var(--colorPrimary);
+        }
+      }
+
+      .cmt-reply {
+        font-size: 13px;
+        color: var(--colorDarkGrey);
+        border: none;
+        box-shadow: none;
+        background: none;
+
+        &.active {
+          color: var(--colorPrimary);
+        }
+      }
+
+      .cmt-like {
+        color: var(--colorDarkGrey);
+
+        &.active {
+          color: var(--colorPrimary);
+        }
+      }
+    }
+
+    .cmt-text {
+      color: var(--colorDarkGrey);
+      margin: 0 0 5px;
+      word-wrap: break-word;
+      white-space: pre-line;
+    }
+  }
+}
+
+.reply-bl-form {
+  display: none;
+  transition: all 0.3s ease-in-out;
+
+  .feed-comment {
+    .comment-form .cmt-user {
+      display: none;
+    }
+
+    .comment-form .cmt-area .ant-input {
+      background: var(--colorLightGrey);
+      height: 40px;
+    }
+  }
+
+  &.active {
+    display: block;
+  }
+}
+
+.view-cmt {
+  a {
+    font-size: 12px;
+  }
+}
+
+.reply-bl-list {
+  padding-left: 45px;
+  transition: all 0.3 ease-in-out;
+}
+
+.cmt-handle-options {
+  cursor: pointer;
+
+  :global .ant-dropdown-menu {
+    .ant-dropdown-menu-item {
+      padding: 0;
+
+      .ant-dropdown-menu-title-content {
+        .ant-menu {
+          background-color: var(--colorWhite);
+          border: none;
+
+          .ant-menu-item {
+            .ant-menu-title-content {
+              color: var(--colorBlack);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+[data-theme='dark'] .cmt-item {
+  border-color: var(--colorLightGrey);
+
+  :global .cmt-content {
+    .cmt-reply {
+      color: var(--colorGrey);
+
+      &.active {
+        color: var(--colorPrimary);
+      }
+    }
+
+    .cmt-text {
+      color: var(--colorBlack);
+    }
+  }
+}

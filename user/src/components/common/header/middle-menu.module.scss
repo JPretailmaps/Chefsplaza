@@ -1,0 +1,99 @@
+.nav-bar {
+  width: 100%;
+
+  .nav-icons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+
+    li {
+      padding: 0 15px;
+      display: flex;
+      align-items: center;
+      position: relative;
+      font-size: 15px;
+      font-weight: 600;
+      cursor: pointer;
+      height: 50px;
+
+      a {
+        color: var(--colorGrey);
+        font-weight: 600;
+      }
+
+      :global .anticon {
+        font-size: 25px;
+      }
+
+      .bagde {
+        position: absolute;
+        top: 2px;
+        right: 2px;
+        font-size: 11px;
+        box-shadow: none;
+        padding: 0 5px;
+        line-height: 20px;
+        min-width: 20px;
+        height: 20px;
+
+        :global .ant-badge-count {
+          background-color: var(--colorPrimary);
+        }
+
+        @media (max-width: 550px) {
+          span {
+            font-size: 11px;
+          }
+        }
+      }
+
+      &.logo-nav {
+        padding: 15px 0 0 0;
+        width: 81%;
+
+        &:hover {
+          border: 0 !important;
+        }
+
+        img {
+          height: 35px;
+          width: auto;
+        }
+      }
+
+      &.menu-profile {
+        img {
+          height: 32px;
+          width: 32px;
+          border-radius: 50%;
+        }
+      }
+
+      &.active {
+        color: var(--colorPrimary);
+        border-bottom: 2px solid;
+
+        a {
+          color: var(--colorPrimary);
+        }
+      }
+
+    }
+
+    .header-right-nologin {
+      display: flex;
+      white-space: nowrap;
+    }
+
+    .right-menu {
+      padding: 7px 0;
+
+      .ant-menu-submenu-title {
+        padding: 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,16 @@
+.earning-stats {
+  display: flex;
+  justify-content: center;
+
+  :global .ant-statistic-title {
+    text-align: center;
+  }
+
+  @media (max-width: 550px) {
+    text-align: center;
+
+    :global .ant-space {
+      flex-direction: column;
+    }
+  }
+}

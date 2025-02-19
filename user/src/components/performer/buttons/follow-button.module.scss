@@ -1,0 +1,15 @@
+.follow-btn {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  opacity: 0.8;
+  color: #fff;
+  font-weight: 500;
+  font-size: 25px;
+
+  &.active,
+  &:hover {
+    color: var(--colorPrimary);
+  }
+}

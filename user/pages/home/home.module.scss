@@ -1,0 +1,312 @@
+.home-page {
+  .home-heading {
+    padding: 10px 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    border-bottom: 1px solid var(--colorLightGrey);
+    flex-wrap: nowrap;
+    position: relative;
+
+    .left-side {
+      display: flex;
+      align-items: center;
+      gap: 45px;
+
+      h3 {
+        color: var(--colorGrey);
+        font-size: 16px;
+        margin: 0;
+      }
+    }
+
+    .search-bar-feed {
+      width: 35%;
+      padding-left: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+
+      [class~='ant-input-affix-wrapper'] {
+        opacity: 0;
+        border: none;
+        padding: 0;
+        outline: none;
+        box-shadow: none;
+        background: none;
+        color: var(--black);
+        transition: opacity 0.3s ease-in-out;
+        visibility: hidden;
+
+        &.active {
+          visibility: visible;
+          opacity: 1;
+          bottom: 1px;
+        }
+
+        [class~='ant-input-prefix'] {
+          font-size: 25px;
+          margin-right: 10px;
+        }
+
+        input {
+          height: 30px;
+        }
+      }
+
+      .open-search {
+        color: var(--colorGray);
+
+        [class~='anticon'] {
+          font-size: 25px;
+        }
+      }
+    }
+
+    @media screen and (max-width: 550px) {
+
+      .search-bar-feed {
+        right: 10px;
+        position: absolute;
+        width: 70%;
+      }
+    }
+  }
+
+  //custom
+  .home-container {
+    display: flex;
+    width: 100%;
+
+    .left-container {
+      width: 65%;
+      padding: 10px 10px 10px 0;
+    }
+
+    .right-container {
+      width: 35%;
+      padding: 10px 0 10px 10px;
+
+      @media screen and (max-width: 550px) {
+        display: none;
+      }
+
+      .suggestion-bl {
+        position: -webkit-sticky;
+        position: sticky;
+        top: 55px;
+
+        .sug-top {
+          margin-bottom: 5px;
+          display: flex;
+          justify-content: space-between;
+          padding: 2px;
+
+          .sug-text {
+            font-size: 18px;
+            color: var(--colorGrey);
+            width: 60%;
+          }
+
+          .btns-grp {
+            width: 40%;
+          }
+
+          .reload-btn {
+            font-size: 22px;
+            color: var(--colorGrey);
+          }
+
+          .free-btn {
+            font-size: 22px;
+            margin-right: 15px;
+            color: var(--colorGrey);
+
+            .anticon-tag.active {
+              position: relative;
+
+              &::after {
+                content: '';
+                border-bottom: 2px solid;
+                width: 20px;
+                height: 0;
+                position: absolute;
+                left: 2px;
+                top: 10px;
+                transform: rotate(45deg);
+              }
+            }
+          }
+        }
+
+        .ant-carousel {
+          .slick-slide {
+            height: unset;
+            line-height: normal;
+          }
+
+          .slick-prev {
+            top: -23px;
+            right: 40px;
+            left: unset;
+            padding: 12px;
+            border-radius: 50%;
+            background-color: var(--colorPrimary);
+            opacity: 0.8;
+
+            &::before {
+              background-size: 10px;
+              width: 10px;
+              height: 10px;
+            }
+
+            &:hover,
+            &:focus {
+              background-color: var(--colorPrimary);
+              opacity: 0.5;
+            }
+          }
+
+          .slick-next {
+            top: -23px;
+            right: 0px;
+            left: unset;
+            padding: 12px;
+            border-radius: 50%;
+            background-color: var(--colorPrimary);
+            opacity: 0.8;
+
+            &::before {
+              background-size: 10px;
+              width: 10px;
+              height: 10px;
+            }
+
+            &:hover,
+            &:focus {
+              background-color: var(--colorPrimary);
+              opacity: 0.5;
+            }
+          }
+
+          .slick-dots.slick-dots-bottom {
+            bottom: -5px;
+
+            button {
+              background: var(--colorGray);
+            }
+
+            .slick-active {
+              button {
+                background: var(--colorPrimaryLight);
+              }
+            }
+          }
+        }
+
+        @media screen and (max-width: 768px) {
+          .sug-top {
+            .sug-text {
+              width: 50%;
+              font-size: 16px;
+            }
+
+            .btns-grp {
+              margin: 100px;
+              width: 30%;
+            }
+          }
+
+          .ant-carousel {
+
+            .slick-prev {
+              right: 32px;
+            }
+
+            .slick-next {
+              right: 2px;
+            }
+          }
+        }
+
+        @media screen and (max-width: 550px) {
+          .sug-top {
+            .sug-text {
+              width: 85%;
+            }
+          }
+        }
+      }
+    }
+
+    @media screen and (max-width: 550px) {
+      flex-direction: column-reverse;
+
+      .left-container,
+      .right-container {
+        width: 100%;
+        padding: 0;
+      }
+    }
+  }
+
+  .filter-wrapper {
+    align-items: center;
+    overflow: auto;
+    margin-bottom: 20px;
+    padding: 10px 0;
+    white-space: nowrap;
+
+    @media (max-width: 550px) {
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
+
+    :global .anticon {
+      font-size: 20px;
+      color: var(--colorSecondary);
+    }
+
+    :global .ant-btn {
+      border: none;
+      box-shadow: none;
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--colorDarkGrey);
+      border-radius: 6px;
+      background-color: var(--colorLightBlue);
+      margin-left: 7px;
+      opacity: 0.9;
+
+      &:first-child {
+        margin: 0;
+      }
+
+      &.active {
+        opacity: 1;
+        background-color: var(--colorPrimary);
+        color: #fff;
+      }
+    }
+
+    &::-webkit-scrollbar {
+      width: 2px;
+      height: 2px;
+    }
+  }
+}
+
+[data-theme="dark"] .home-page {
+  .filter-wrapper {
+    :global .ant-btn {
+      // background-color: var(--colorWhite);
+
+      &.active {
+        background-color: var(--colorPrimary);
+        color: #fff;
+      }
+    }
+  }
+}

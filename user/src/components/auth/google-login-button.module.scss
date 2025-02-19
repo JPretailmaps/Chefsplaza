@@ -1,0 +1,55 @@
+.google-button.btn-login {
+  height: 48px;
+  background-color: #CCFF66 !important;
+  color: #fff;
+  padding: 5px 12px;
+  border-radius: 25px;
+  width: 100%;
+  font-weight: 600;
+
+  .sign-in-google {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px !important;
+    font-weight: bold; 
+  }
+
+  p {
+    color: #fff;
+  }
+
+  .icon-google {
+    font-size: 35px;
+    position: absolute;
+    left: 20px;
+
+    :global .anticon-google {
+      font-size: 35px;
+    }
+  }
+
+  img {
+    height: 18px;
+    width: auto;
+    margin-right: 5px;
+  }
+
+  :global .anticon {
+    font-size: 18px;
+    margin-right: 5px;
+  }
+}
+
+.btn-google-login-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  :global .ant-typography {
+    font-size: 12px;
+  }
+  .btn-google-login {
+    display: flex;
+    justify-content: center;
+  }
+}

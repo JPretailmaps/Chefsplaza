@@ -1,0 +1,66 @@
+.actions-grp {
+  display: flex;
+  width: 50%;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 45px;
+
+  :global .ant-btn {
+    color: var(--colorPrimary);
+    font-weight: 500;
+    background-color: transparent!important;
+    border: 1px solid var(--colorLightGrey);
+    position: relative;
+    width: 48px;
+    height: 48px;
+    flex: 0 0 48px;
+    padding: 0;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 5px;
+    outline: none;
+    border-radius: 50%;
+    font-size: 14px !important;
+
+    @media screen and (max-width: 550px) {
+      width: auto;
+      height: auto;
+      flex: inherit;
+      border-radius: 5px;
+      padding: 5px;
+      width: calc(45% - 10px);
+      margin: 3px;
+      vertical-align: middle;
+    }
+
+    :global {
+      .btn-sendtip, .show-mobile {
+        display: none;
+        @media screen and (max-width: 550px) {
+          display: block !important;
+        }
+      }
+    }
+
+    :global .anticon {
+      font-size: 20px;
+
+      &.anticon-custom {
+        font-size: 22px;
+      }
+    }
+  }
+
+  .btn-action.btn-border {
+    border: 1px solid var(--colorLightGrey);
+    color: var(--colorPrimary);
+  }
+
+  @media screen and (max-width: 550px) {
+    margin-top: 10px;
+    width: 100%;
+    display: block;
+    text-align: center;
+  }
+}

@@ -1,0 +1,35 @@
+.message-list {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  padding-bottom: 50px;
+
+  .message-list-container {
+    padding: 0 10px;
+    overflow-y: auto;
+    height: 423px;
+
+    @media screen and (max-width: 550px) {
+      padding: 0 7px;
+      -webkit-mask-image: -webkit-linear-gradient(top, transparent -5%, #000 30%);
+      height: 30vh;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
+
+    .sub-text {
+      text-align: center;
+      color: var(--colorError);
+      padding: 10px;
+      font-size: 16px;
+      cursor: pointer;
+
+      @media all and (max-width: 550px) {
+        font-size: 14px;
+      }
+    }
+  }
+
+}

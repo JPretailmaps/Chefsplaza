@@ -1,0 +1,8 @@
+.subscription-modal {
+  border-radius: 5px;
+  overflow: hidden;
+
+  :global .ant-modal-body {
+    padding: 0 0 15px;
+  }
+}

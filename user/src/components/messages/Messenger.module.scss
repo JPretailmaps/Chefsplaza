@@ -1,0 +1,43 @@
+.messenger {
+  display: flex;
+  width: 100%;
+  height: 85vh;
+  position: relative;
+  margin: 20px 0;
+
+  .sidebar {
+    width: 30%;
+    border: 1px solid var(--colorGray);
+  }
+
+  .chat-content {
+    width: 70%;
+    border: 1px solid var(--colorGray);
+    border-left: none;
+  }
+
+  @media all and (max-width: 550px) {
+    .sidebar {
+      width: 100%;
+    }
+
+    .sidebar.active {
+      display: none;
+    }
+
+    .chat-content {
+      display: none;
+    }
+
+    .chat-content.active {
+      position: fixed;
+      top: 0;
+      left: 0;
+      display: block;
+      width: 100%;
+      height: 100%;
+      z-index: 999;
+      background-color: var(--colorWhite);
+    }
+  }
+}

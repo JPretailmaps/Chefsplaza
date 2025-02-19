@@ -1,0 +1,80 @@
+.prd-card {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+  position: relative;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  border-radius: 5px;
+  overflow: hidden;
+  height: 282px;
+
+  .thumbnail {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.2s ease-in-out;
+  }
+
+  .prd-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-transform: capitalize;
+    color: #fff;
+    background-color: var(--colorPrimary);
+    padding: 5px 10px;
+    text-align: center;
+    font-weight: 600;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+
+  .label-wrapper {
+    position: absolute;
+    right: auto;
+    left: 0px;
+    top: 10px;
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+
+    .label-wrapper-price {
+      color: #fff;
+      background-color: var(--colorSecondary);
+      padding: 3px 15px;
+      clip-path: polygon(0px 0px, 0px 100%, 100% 100%, 90% 50%, 100% 0);
+      font-size: 11px;
+      font-weight: 600;
+      margin: 5px 0;
+    }
+
+    .label-wrapper-digital {
+      color: #fff;
+      background-color: var(--colorPrimary);
+      padding: 3px 15px;
+      clip-path: polygon(0px 0px, 0px 100%, 100% 100%, 90% 50%, 100% 0);
+      font-size: 11px;
+      font-weight: 600;
+      margin: 5px 0;
+    }
+  }
+
+
+  &:hover {
+    .prd-info {
+      background-color: var(--colorSecondary);
+    }
+
+    .thumbnail {
+      transform: scale(1.2);
+      z-index: 0;
+    }
+  }
+
+  @media screen and (max-width: 550px) {
+    height: 180px;
+  }
+}

@@ -1,0 +1,18 @@
+.action-ico.action-btn {
+  box-shadow: none;
+  outline: none;
+  cursor: pointer;
+  padding: 5px 10px;
+  background-color: unset;
+  border: unset;
+  color: var(--colorBlack);
+
+  [class~="anticon"] {
+    font-size: 20px;
+  }
+
+  &:hover,
+  &.active {
+    color: var(--colorPrimaryLight);
+  }
+}

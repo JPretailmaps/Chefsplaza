@@ -1,0 +1,38 @@
+.video-form {
+  padding: 10px;
+  width: 600px;
+  max-width: calc(100% - 20px);
+  background-color: var(--colorLightBlue);
+  margin: 20px auto;
+
+  :global {
+    .ant-form-item .ant-form-item-extra, .ant-form-item .ant-form-item-explain {
+      color: var(--colorBlack);
+    }
+
+    .ant-row .ant-col {
+      padding: 5px 5px 0 5px;
+    }
+  }
+
+  .button-form {
+    :global .ant-btn {
+      margin: 10px 10px 10px 0;
+    }
+  }
+
+}
+
+.upload-bl {
+  position: relative;
+  background-color: var(--colorLightBlue);
+  color: var(--colorBlack);
+  border-radius: 3px;
+
+  .remove-btn {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+}

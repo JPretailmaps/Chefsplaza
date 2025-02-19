@@ -1,0 +1,22 @@
+.paypal-payout {
+  input {
+    width: 100%;
+    border: 1px solid #eee;
+    border-radius: 25px;
+    padding: 4px 15px;
+    margin-bottom: 15px;
+    outline: none;
+  }
+}
+
+.creator-note {
+  overflow-wrap: break-word;
+}
+
+.payout-stats {
+  @media (max-width: 550px) {
+    :global .ant-space {
+      flex-direction: column;
+    }
+  }
+}

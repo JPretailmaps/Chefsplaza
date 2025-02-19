@@ -1,0 +1,10 @@
+.email-verify-success {
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 160px);
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 50px;
+  font-size: 18px;
+}

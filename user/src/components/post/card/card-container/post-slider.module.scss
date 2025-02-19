@@ -1,0 +1,49 @@
+.feed-slider {
+  position: relative;
+  border-radius: 6px;
+  background-color: var(--colorBlack);
+  overflow: auto;
+  display: flex;
+  width: 100%;
+  flex-wrap: nowrap;
+  align-items: center;
+
+  img {
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+    object-fit: contain;
+  }
+
+  .slide-top {
+    position: absolute;
+    top: 0;
+    padding: 8px 12px;
+    width: calc(100% - 24px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+
+    .count {
+      font-size: 13px;
+      background-color: rgba(0, 0, 0, .3);
+      color: #fff;
+      padding: 5px 10px;
+      border-radius: 5px;
+    }
+
+    .btn-grp {
+      border-radius: 5px;
+      background-color: rgba(0, 0, 0, .3);
+
+      :global .ant-btn {
+        background: transparent;
+        border: none;
+        outline: none;
+        box-shadow: none;
+        color: var(--colorWhite);
+      }
+    }
+  }
+}

@@ -1,0 +1,32 @@
+.stats-grp {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  font-size: 14px;
+  color: var(--colorGrey);
+  margin: 5px 0 10px;
+
+  :global .stat-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 14px;
+    color: var(--colorGrey);
+
+    svg {
+      height: 22px;
+      width: auto;
+    }
+  
+    :global {
+      .anticon {
+        font-size: 20px;
+        svg {
+          height: unset;
+        }
+      }
+    }
+  }
+
+  
+}

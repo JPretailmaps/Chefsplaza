@@ -1,0 +1,60 @@
+.conversation-stream {
+  width: 100%;
+  border: solid 1px var(--colorLight);
+  position: relative;
+  min-height: 524px;
+
+  .stream-chat {
+    .chat-ttl {
+      padding: 14px;
+      font-size: 14px;
+      font-weight: 600;
+      text-align: center;
+      color: #fff;
+      background-color: var(--colorPrimary);
+
+      @media screen and (max-width: 550px) {
+        display: none;
+      }
+    }
+  }
+
+  @media screen and (max-width: 550px) {
+    position: absolute;
+    z-index: 10;
+    bottom: 0;
+    left: 0;
+    width: calc(100% - 60px);
+    border: 0;
+    min-height: auto;
+
+    &:global(.hide-conversation) {
+      :global .message-list-custom>div:first-child {
+        display: none;
+      }
+    }
+  }
+
+  :global {
+    .hide-chat {
+      display: none;
+
+      @media screen and (max-width: 550px) {
+        display: block;
+      }
+    }
+
+    .start-conversation {
+      text-align: center;
+      color: var(--colorBlack);
+
+      @media screen and (max-width: 550px) {
+        width: calc(100% + 60px);
+      }
+    }
+  }
+}
+
+[data-theme="dark"] .conversation-stream {
+  border-color: transparent;
+}

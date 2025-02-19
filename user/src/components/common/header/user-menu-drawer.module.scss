@@ -1,0 +1,127 @@
+.profile-drawer {
+  :global .ant-drawer-body {
+    padding: 10px 15px 60px;
+  }
+
+  :global .ant-drawer-close {
+    z-index: 1;
+    padding: 10px;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  .profile-user {
+    display: flex;
+
+    [class~="avatar"] {
+      width: 40px;
+      height: 40px;
+      margin-right: 5px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    :global .profile-name {
+      display: flex;
+      width: 100%;
+      flex-direction: column;
+      text-transform: capitalize;
+      font-size: 13px;
+      color: var(--colorBlack);
+
+      .sub-name {
+        font-size: 11px;
+        text-transform: none;
+      }
+    }
+  }
+
+  .sub-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
+    font-size: 12px;
+
+    a {
+      color: var(--colorDarkGrey);
+
+      &.user-balance {
+        display: inline-flex;
+        align-items: center;
+        font-size: 12px;
+
+        svg {
+          height: 25px;
+          width: auto;
+        }
+
+
+        :global .anticon {
+          font-size: 18px;
+
+          svg {
+            height: unset;
+          }
+        }
+
+        :global .anticon-plus-circle {
+          color: var(--colorPrimary);
+          margin: 0 5px;
+          font-size: 18px;
+
+          svg {
+            height: unset;
+          }
+        }
+      }
+    }
+  }
+
+  .profile-menu-item {
+    .menu-item {
+      padding: 5px;
+      margin-bottom: 2px;
+      cursor: pointer;
+      font-size: 15px;
+      color: var(--colorBlack);
+
+      :global .anticon {
+        font-size: 18px;
+      }
+
+      &.active,
+      &:hover {
+        background-color: var(--colorPrimary);
+        border-radius: 5px;
+        color: #fff;
+
+        :global .anticon {
+          color: #fff;
+        }
+      }
+    }
+
+    .ant-divider {
+      margin: 10px 0;
+    }
+  }
+}
+
+[data-theme="dark"] .profile-drawer {
+  color: var(--colorBlack);
+  background-color: var(--colorLightBlue);
+
+  // .profile-menu-item {
+  //   .menu-item {
+  //     color: var(--colorGrey);
+  //   }
+  // }
+
+  .sub-info {
+    a {
+      color: var(--colorBlack);
+    }
+  }
+}

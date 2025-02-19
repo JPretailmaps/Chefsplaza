@@ -1,0 +1,14 @@
+.account-form {
+  :global {
+    .ant-form-item {
+      .ant-form-item-label {
+        label {
+          color: var(--colorBlack);
+        }
+      }
+      .ant-form-item-explain, .ant-form-item-extra {
+        color: var(--colorBlack);
+      }
+    }
+  }
+}

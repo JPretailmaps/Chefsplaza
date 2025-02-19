@@ -1,0 +1,91 @@
+.lock-content {
+  position: relative;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  border-radius: 5px;
+  overflow: hidden;
+
+  .feed-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(/leaf.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .count-media {
+    position: absolute;
+    bottom: 2px;
+    padding: 2px 5px;
+    font-size: 11px;
+    color: var(--colorLight);
+    text-align: center;
+  }
+
+  .lock-middle {
+    position: relative;
+    width: 100%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    [class~="anticon"] {
+      font-size: 32px;
+      color: #fff;
+      margin: 10px;
+    }
+
+    :global .ant-btn {
+      &.secondary {
+        border: none;
+        // border-radius: 25px;
+        font-size: 14px;
+        font-weight: 600;
+        width: auto;
+      }
+
+      &:hover {
+        color: #fff;
+        opacity: 0.5;
+      }
+
+      &.ant-btn-link {
+        font-size: 12px;
+        color: #fff;
+
+        .anticon {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+
+  p {
+    position: relative;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 600;
+    color: #fff;
+    padding: 5px 15px;
+    border: 1px solid;
+    border-radius: 25px;
+    font-weight: 600;
+    background-color: var(--colorSecondary);
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  @media screen and (max-width: 550px) {
+    height: 215px;
+  }
+}

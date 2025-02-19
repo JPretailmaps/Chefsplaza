@@ -1,0 +1,28 @@
+.my-order-detail {
+    background-color: var(--colorLightBlue);
+    padding: 20px;
+    border-radius: 5px;
+    font-size: 14px;
+    margin-bottom: 15px;
+    
+    :global .ant-descriptions-view {
+        .ant-descriptions-item {
+            border-bottom: 1px solid var(--colorLightGrey);
+            padding: 10px 0 !important;
+            .ant-descriptions-item-label {
+                color: var(--colorBlack);
+            }
+            .ant-descriptions-item-content {
+                font-weight: bold;
+            }
+        }
+    }
+    .my-order-tags {
+        display: flex;
+        gap: 15px;
+        margin-bottom: 15px;
+        font-size: 14px;
+        color: var(--colorBlack);
+        text-transform: uppercase;
+    }
+}

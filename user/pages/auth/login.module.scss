@@ -1,0 +1,94 @@
+.login-box {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 0px;
+  gap: 60px;
+
+  @media (max-width: 550px) {
+  min-height: 50vh;
+  }
+
+  .content-left {
+    padding: 0; 
+    width: 55%;
+    position: relative;
+    min-height: 100vh;
+    bottom: 54px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; 
+    }
+
+    @media (max-width: 550px) {
+      display: none; 
+    }
+  }
+
+  .content-right {
+    padding: 20px 30px;
+    width: 45%;
+    
+    .button-content-right {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 20%;
+      justify-content: center; 
+    }
+
+    :global .ant-btn {
+      color: #000;
+      font-weight: bold;
+      border-radius: 20px;
+      padding: 5px 20px;
+      font-size: 16px;
+    }
+
+    .ant-btn:hover {
+      background-color: #76c539;
+      border-color: #76c539;
+    }
+
+    .logo {
+      text-align: center;
+      height: 80px;
+      width: auto;
+
+      img {
+        object-fit: contain;
+        width: auto;
+        height: 80px;
+      }
+    }
+
+    .title {
+      h3 {
+        margin-top: 30px;
+        font-size: 28px;
+        font-weight: 700;
+        text-align: center;
+      }
+    }
+
+    a {
+      font-weight: 600;
+      font-size: 11px;
+      color: var(--colorPrimary);
+    }
+
+    p a {
+      font-size: 12px;
+
+      &.sub-text {
+        font-size: 10px;
+      }
+    }
+
+    @media (max-width: 550px) {
+      padding: 20px;
+      width: 100%;
+    }
+  }
+}

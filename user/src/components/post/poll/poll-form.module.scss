@@ -1,0 +1,44 @@
+.poll-form {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid var(--colorGray);
+
+  .poll-top {
+    margin-top: 5px;
+    padding: 5px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    span {
+      cursor: pointer;
+      color: var(--colorPrimaryLight);
+    }
+
+    a {
+      color: var(--colorWhite);
+      padding: 1px 7px;
+      border-radius: 50%;
+      background-color: var(--colorPrimaryLight);
+    }
+  }
+
+  [class~="ant-form-item-control"] {
+    padding: 5px 0;
+  }
+
+  .poll-input {
+    margin-bottom: 10px;
+    color: var(--colorBlack);
+    &::placeholder {
+      color: var(--colorBlack);
+    }
+  }
+
+  .form-item-no-pad {
+    [class~="ant-col"] {
+      padding: 5px 0;
+    }
+  }
+
+}

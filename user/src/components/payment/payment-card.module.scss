@@ -1,0 +1,54 @@
+.card-item {
+  width: 350px;
+  height: 180px;
+  max-width: 100%;
+  border-radius: 12px;
+  border: 1px solid var(--colorDarkGrey);
+  padding: 20px;
+  background-color: var(--colorWhite);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-image: url('/card-bg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  @media screen and (max-width: 550px) {
+    width: calc(100% - 20px);
+  }
+
+  .card-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #fff
+  }
+
+  .card-holder-name {
+    text-transform: uppercase;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 600;
+  }
+
+  .remove-btn {
+    display: none;
+    position: absolute;
+    top: -25px;
+    right: -25px;
+    color: var(--colorBlack);
+    height: 45px;
+    border: 2px solid var(--colorDarkGrey);
+    border-radius: 50%;
+  }
+
+  &:hover {
+    .remove-btn {
+      display: block;
+    }
+  }
+}

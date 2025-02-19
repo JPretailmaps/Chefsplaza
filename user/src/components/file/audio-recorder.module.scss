@@ -1,0 +1,68 @@
+.audio-recorder {
+  .recorder {
+    .timer {
+      margin-left: 10px;
+      font-size: 18px;
+      text-align: center;
+      font-weight: 600;
+      color: var(--colorBlack);
+    }
+
+    .microphone {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .waves {
+        z-index: 0;
+        position: absolute;
+        height: 50px;
+        background-image: url("/sound-wave.gif");
+        background-size: contain;
+        background-position: center;
+        width: 100%;
+        display: none;
+
+        &.active {
+          display: block;
+        }
+      }
+
+      .start-btn {
+        z-index: 1;
+        height: 55px;
+        font-size: 55px;
+        line-height: 55px;
+        padding: 0;
+        color: var(--colorPrimaryLight);
+        border: none;
+        box-shadow: none;
+        opacity: 1;
+      }
+    }
+
+    .mic-txt {
+      text-align: center;
+      font-size: 11px;
+      color: var(--colorGrey);
+    }
+
+    .btn-grps {
+      display: flex;
+      justify-content: center;
+
+      .ant-btn {
+        border: none;
+        font-size: 14px;
+        color: #3f8cff;
+        display: inline-flex;
+        align-items: center;
+
+        svg {
+          font-size: 32px;
+        }
+      }
+    }
+  }
+}

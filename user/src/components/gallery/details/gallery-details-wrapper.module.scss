@@ -1,0 +1,95 @@
+.photo-grid {
+  margin: 15px 0;
+
+  .subscription {
+    max-width: 400px;
+    margin: 15px auto;
+    display: flex;
+    flex-direction: column;
+
+    [class~="ant-btn"] {
+      width: 100%;
+      margin: 5px;
+    }
+  }
+}
+
+.gal-stats {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  span {
+    font-size: 12px;
+    color: var(--colorDarkGrey);
+    margin-right: 5px;
+  }
+}
+
+.page-middle {
+  padding: 0 20px;
+  background-color: var(--colorLightBlue);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 10px;
+
+  @media screen and (max-width: 550px) {
+    padding: 0 10px;
+  }
+
+  :global .ant-btn {
+    background-color: var(--colorWhite);
+  }
+}
+
+.related-items {
+  margin: 30px 0;
+
+  .ttl-1 {
+    font-size: 1.5em;
+    font-weight: 800;
+  }
+
+  .r-title {
+    margin: 0 5px;
+  }
+
+  .ant-col {
+    padding: 10px 12px;
+
+    @media screen and (max-width: 768px) {
+      padding: 5px;
+    }
+  }
+}
+
+.vid-split {
+  background-color: var(--colorLightBlue);
+  padding: 20px 5px;
+}
+
+.vid-act {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+
+  .act-btns {
+    .react-btn {
+      color: var(--colorDarkGrey);
+      background: var(--colorWhite);
+      border: none;
+      margin-left: 5px;
+      border-radius: 3px;
+      padding: 10px 13px;
+      outline: none;
+      cursor: pointer;
+
+      &.active {
+        color: var(--colorWhite);
+        background: var(--colorPrimary);
+      }
+    }
+  }
+}

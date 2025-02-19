@@ -1,0 +1,16 @@
+.ant-btn.action-btn {
+  padding: 5px 10px;
+  background-color: transparent;
+  outline: none;
+  box-shadow: none;
+  border: none;
+  color: var(--colorBlack);
+
+  :global .anticon {
+    font-size: 20px;
+  }
+
+  &.active, &.hover {
+    color: var(--colorPrimary);
+  }
+}

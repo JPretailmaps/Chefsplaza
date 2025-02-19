@@ -1,0 +1,106 @@
+.contact-box {
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  gap: 60px;
+
+  .content-left {
+    padding: 20px 30px;
+    width: 50%;
+    position: relative;
+    min-height: 75vh;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    @media (max-width: 550px) {
+      display: none;
+    }
+  }
+
+  .content-right {
+    padding: 20px 30px;
+    width: 50%;
+
+    .logo {
+      text-align: center;
+      height: 80px;
+      width: auto;
+
+      img {
+        object-fit: contain;
+        width: auto;
+        height: 80px;
+      }
+    }
+
+    .title {
+        margin-top: 30px;
+        font-size: 28px;
+        font-weight: 700;
+        text-align: center;
+    }
+
+    a {
+      font-weight: 600;
+      font-size: 11px;
+      color: var(--colorPrimary);
+    }
+
+    p a {
+      font-size: 12px;
+
+      &.sub-text {
+        font-size: 10px;
+      }
+    }
+
+    .contact-form {
+      max-width: 500px;
+      margin: auto;
+    
+      .form-button {
+        width: 100%;
+        background-image: linear-gradient(0deg, var(--colorPrimary), var(--colorPrimaryLight));
+        border-color: var(--colorPrimaryLight);
+        color: #fff;
+        height: 48px;
+        border-radius: 50px;
+        font-size: 16px;
+        margin-bottom: 20px;
+      }
+    
+      :global .ant-form-item {
+    
+        .ant-form-item-control  {
+          padding: 7px 0;
+        }
+    
+        input, textarea {
+          border-radius: 20px;
+          padding: 0 20px;
+        }
+    
+        .ant-input-password {
+          border-radius: 25px;
+          padding: 0 20px;
+    
+          input {
+            border-radius: 25px;
+            padding: 0 9px;
+            border: none;
+            box-shadow: none;
+          }
+        }
+      }
+    }
+
+    @media (max-width: 550px) {
+      padding: 0;
+      width: 100%;
+    }
+  }
+}

@@ -1,0 +1,18 @@
+.stats-earning {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  margin: 10px 0;
+
+  :global .ant-statistic {
+    padding: 0 10px;
+    color: var(--colorBlack);
+    text-align: center;
+
+    .ant-statistic-title,
+    .ant-statistic-content {
+      color: var(--colorBlack);
+    }
+  }
+}

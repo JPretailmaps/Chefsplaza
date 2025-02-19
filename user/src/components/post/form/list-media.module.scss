@@ -1,0 +1,126 @@
+.f-upload-list {
+  display: flex;
+  width: 100%;
+  overflow: auto;
+  flex-wrap: wrap;
+  gap: 5px;
+
+  .f-upload-item {
+    border-radius: 5px;
+    overflow: hidden;
+    color: var(--colorBlack);
+    position: relative;
+    border: 1px solid var(--colorPrimaryLight);
+    width: 120px;
+
+    .f-upload-thumb {
+      height: 120px;
+
+      :global .ant-image {
+        height: 100%;
+        width: 100%;
+
+        img {
+          object-fit: cover;
+        }
+      }
+
+      .f-thumb-vid {
+        position: relative;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        background-color: var(--colorWhite);
+        cursor: pointer;
+
+        &:hover {
+          background-color: var(--colorLightGrey);
+        }
+
+        [class~="anticon"] {
+          color: var(--colorPrimaryLight);
+          font-size: 22px;
+        }
+      }
+    }
+
+    .f-upload-name {
+      padding: 0 5px;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+      width: 100%;
+    }
+
+    .f-upload-size {
+      font-size: 8px;
+    }
+
+    .f-remove {
+      position: absolute;
+      right: 5px;
+      top: 5px;
+    }
+  }
+
+  .add-more {
+    display: flex;
+    height: 130px;
+    align-self: center;
+    justify-content: center;
+    padding: 10px;
+    color: var(--colorBlack);
+    background-color: var(--colorWhite);
+    border: 1px solid var(--colorLightGrey);
+    border-radius: 5px;
+
+    &:hover {
+      opacity: 0.8;
+    }
+
+    cursor: pointer;
+
+    [class~="ant-upload"] {
+      height: 100%;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+    }
+  }
+}
+
+[data-theme="dark"] .f-upload-list {
+
+  .add-more {
+    background-color: var(--colorGray);
+    color: var(--colorWhite);
+    border: 0;
+  }
+
+  .add-more [class~="ant-upload"] {
+    color: var(--colorBlack);
+  }
+
+  // .f-upload-item {
+  //   background-color: var(--colorGray);
+  //   color: var(--colorGrey);
+  //   .f-upload-thumb {
+  //     .f-thumb-vid {
+  //       background-color: var(--colorGray);
+  //       &:hover {
+  //         background-color: var(--colorGray);
+  //       }
+  //       [class~="anticon"] {
+  //         color: var(--colorPrimaryLight);
+  //       }
+  //     }
+  //   }
+  // }
+}

@@ -1,0 +1,15 @@
+.switch-theme {
+  display: inline-flex;
+  align-items: center;
+  // position: absolute;
+  // bottom: 15px;
+  // right: 15px;
+  gap: 5px;
+  padding: 5px;
+
+  :global {
+    .anticon {
+      font-size: 20px;
+    }
+  }
+}

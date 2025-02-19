@@ -1,0 +1,10 @@
+.menu-items.menu-settings {
+  margin-bottom: 15px;
+  background-color: var(--colorWhite);
+
+  :global {
+    .ant-menu-item {
+      color: var(--colorBlack) !important;
+    }
+  }
+}

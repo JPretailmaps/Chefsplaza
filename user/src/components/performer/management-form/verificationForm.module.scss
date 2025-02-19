@@ -1,0 +1,28 @@
+.model-photo-verification {
+  :global .ant-form-item-control {
+    text-align: left;
+    padding: 20px 5px;
+  }
+
+  :global .ant-form-item-label {
+    font-weight: 600;
+  }
+
+  .document-upload {
+    display: flex;
+    justify-content: space-between;
+
+    :global .ant-upload-picture-card-wrapper.avatar-uploader {
+      width: 50%;
+    }
+  }
+
+  .list-issued-id {
+    li {
+      font-size: 11px;
+      margin-bottom: 5px;
+      list-style: auto;
+      color: var(--colorBlack);
+    }
+  }
+}

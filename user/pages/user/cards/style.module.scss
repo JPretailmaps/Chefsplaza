@@ -1,0 +1,21 @@
+ .card-form {
+   max-width: 400px;
+   margin: 30px auto;
+   border: 1px solid var(--colorLightGrey);
+   border-radius: 5px;
+   padding: 5px;
+   text-align: center;
+ }
+
+ .card-list {
+   display: flex;
+   justify-content: center;
+   flex-wrap: wrap;
+   gap: 30px;
+   padding: 30px 0;
+
+   @media screen and (max-width: 550px) {
+     gap: 0;
+     padding: 5px;
+   }
+ }

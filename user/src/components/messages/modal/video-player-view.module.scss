@@ -1,0 +1,11 @@
+.modal-view-video {
+  :global .ant-modal-body {
+    div {
+      video {
+        max-height: 50vh;
+        cursor: pointer;
+      }
+    }
+  }
+}
+

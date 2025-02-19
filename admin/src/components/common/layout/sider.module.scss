@@ -1,0 +1,122 @@
+.sider {
+  // box-shadow: fade(var(--colorPrimary), 10%) 0 0 28px 0;
+  // z-index: 10;
+
+  @media (max-width: 500px) {
+    &.collapsed {
+      display: none;
+    }
+  }
+}
+
+.brand {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  // padding: 0 24px;
+  // box-shadow: 0 1px 9px -3px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  background-color: var(--colorWhite);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+
+  img {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    max-height: 50px;
+    object-fit: contain;
+  }
+
+  h1 {
+    vertical-align: text-bottom;
+    font-size: 16px;
+    text-transform: uppercase;
+    display: inline-block;
+    font-weight: 700;
+    color: var(--colorPrimary);
+    white-space: nowrap;
+    margin-bottom: 0;
+
+    :local {
+      animation: fadeRightIn 300ms ease-in-out;
+      animation-fill-mode: both;
+    }
+  }
+}
+
+.menu_container {
+  height: calc(100vh - 60px - 49px);
+  overflow-x: hidden;
+  overflow: auto;
+  position: relative;
+  background: var(--colorWhite);
+
+  &::-webkit-scrollbar {
+    background-color: transparent;
+    width: 5px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: var(--colorGray);
+    border-radius: 10px;
+  }
+
+  :global {
+    .ant-menu-inline {
+      border-right: none;
+      background: var(--colorWhite);
+    }
+
+    .ant-menu {
+      background: var(--colorWhite);
+      color: var(--colorBlack);
+      border: none !important;
+
+      ul.ant-menu-sub {
+        background: var(--colorWhite) !important;
+        color: var(--colorBlack);
+        padding-left: 10px;
+      }
+
+      .ant-menu-item-selected {
+        background: var(--colorPrimaryLight) !important;
+        color: #fff !important;
+      }
+    }
+  }
+
+  .ant-menu.ant-menu-inline-collapsed {
+    .ant-menu-item {
+      a {
+        display: none;
+      }
+
+      .anticon {
+        font-size: 20px;
+
+        @media (max-width: 550px) {
+          font-size: 15px;
+        }
+      }
+    }
+  }
+}
+
+.switch_theme {
+  height: 48px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 16px;
+  overflow: hidden;
+  background: var(--colorWhite);
+  border-top: 1px solid rgba(0, 0, 0, 0.12);
+
+  span {
+    white-space: nowrap;
+    overflow: hidden;
+    font-size: 12px;
+  }
+
+}

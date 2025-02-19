@@ -1,0 +1,53 @@
+:root {
+  --colorPrimaryLight: #42b1e8;
+  --colorPrimary: #42b1e8;
+  --colorSecondary: #ff0066;
+  --colorOrange: #ffa75c;
+  --colorLight: #ccf1ff;
+  --colorInfo: #1ea2f1;
+  --colorSuccess: #4ec52a;
+  --colorProcessing: #00a2ae;
+  --colorError: #f04134;
+  --colorWhite: #fff;
+  --colorBlack: #333;
+  --colorDarkGrey: #666;
+  --colorGrey: #929292;
+  --colorGray: #ccc;
+  --colorLightGrey: #ddd;
+  --colorLightBlue: #eeeeee;
+}
+
+[data-theme='dark'] {
+  --colorOrange: #ac7346;
+  --colorInfo: #17527d;
+  --colorSuccess: #2d6223;
+  --colorProcessing: #0a525f;
+  --colorLight: #667683;
+  --colorWhite: #101010;
+  --colorBlack: #e2e2e2;
+  --colorLightGrey: #3e3e3e;
+  --colorLightBlue: #202020;
+  --colorDarkGrey: #c6c6c6;
+  --colorGray: #484848;
+}
+
+
+@keyframes skeleton-loading {
+  0% {
+    background-color: hsl(0, 0%, 96.9%);
+  }
+
+  100% {
+    background-color: hsl(0, 0%, 80%);
+  }
+}
+
+@keyframes scaling {
+  0% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(1.8);
+  }
+}

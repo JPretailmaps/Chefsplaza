@@ -1,0 +1,56 @@
+.vid-player {
+  padding: 15px 0;
+
+  :global .vid-group {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+
+    .video-thumbs {
+      overflow: hidden;
+
+      img {
+        width: 100%;
+        // height: 100%;
+        max-height: 60vh;
+        object-fit: cover;
+        overflow: hidden;
+        filter: blur(25px)
+      }
+    }
+
+    .vid-exl-group {
+      z-index: 1;
+      width: 100%;
+      background: rgba(0, 0, 0, .5);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      position: absolute;
+      top: calc(50% - 125px);
+      min-height: 250px;
+      left: 0;
+      text-align: center;
+
+      h4 {
+        color: var(--colorSecondary);
+        font-size: 18px;
+        padding: 0 15px;
+      }
+
+      h3 {
+        font-size: 25px;
+        color: #fff;
+        margin: 0 0 20px 0;
+      }
+
+
+      @media screen and (max-width: 550px) {
+        .subscription-btn-grp {
+          margin: 0 auto;
+        }
+      }
+    }
+  }
+}

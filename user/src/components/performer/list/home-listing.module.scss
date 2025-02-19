@@ -1,0 +1,109 @@
+.suggestion-bl {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 55px;
+
+  .sug-top {
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 0;
+
+    .sug-text {
+      font-size: 18px;
+      color: var(--colorGrey);
+      width: 60%;
+    }
+
+    .btns-grp {
+      width: 40%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 8px;
+
+      :global .ant-btn {
+        background: none;
+        outline: none;
+        box-shadow: none;
+        border: none;
+        color: var(--colorGrey);
+        padding: 0 8px;
+        position: relative;
+
+        .anticon {
+          font-size: 22px;
+
+          &.active {
+            color: var(--colorPrimary);
+            text-decoration: line-through;
+          }
+        }
+      }
+
+      .free_btn {
+        .free-txt {
+          font-size: 10px;
+          position: absolute;
+          top: 22px;
+          left: 0;
+          text-decoration: line-through;
+
+          &.active {
+            text-decoration: none;
+          }
+        }
+
+
+        &.active {
+          color: var(--colorPrimary);
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .sug-top {
+      .sug-text {
+        width: 50%;
+        font-size: 16px;
+      }
+
+      .btns-grp {
+        width: 50%;
+      }
+    }
+  }
+
+  @media screen and (max-width: 550px) {
+    .sug-top {
+      .sug-text {
+        width: 80%;
+      }
+    }
+  }
+}
+
+.home-footer {
+  opacity: 0;
+  transition: opacity 0.3s linear;
+
+  .main-footer {
+    ul li {
+      font-size: 11px;
+    }
+
+    .footer-content {
+      font-size: 11px;
+    }
+  }
+
+  &.active {
+    opacity: 1;
+  }
+
+  @media screen and (max-width: 550px) {
+    display: none;
+  }
+}

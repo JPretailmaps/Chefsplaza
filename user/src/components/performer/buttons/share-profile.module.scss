@@ -1,0 +1,11 @@
+.social-share-btns {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+
+  [class~='react-share__ShareButton'] {
+    margin: 0 5px;
+  }
+}

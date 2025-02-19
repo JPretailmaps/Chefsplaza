@@ -1,0 +1,56 @@
+
+.about-block {
+  :global .ant-collapse {
+    &.ant-collapse-borderless {
+      background-color: transparent;
+    }
+
+    .ant-collapse-header {
+      padding: 12px 0;
+      margin-top: 10px;
+      color: var(--colorSecondary);
+      font-weight: 600;
+    }
+
+    .ant-collapse-content {
+      .ant-collapse-content-box {
+        padding: 0 0 12px;
+        @media (max-width: 550px) {
+          margin-left: 0;
+        }
+      }
+    }
+
+    .ant-collapse-item {
+      border: none;
+    }
+
+    .ant-collapse-borderless {
+      background-color: transparent;
+    }
+  }
+
+  .bio {
+    white-space: pre-line;
+    font-size: 14px;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px dashed var(--colorGray);
+    ;
+  }
+
+  .performer-info {
+    text-transform: capitalize;
+    :global {
+      .ant-descriptions-row >td {
+        padding-bottom: 5px !important;
+      }
+    }
+  }
+}
+
+[data-theme='dark'] .about-block {
+  :global .ant-collapse .ant-collapse-content {
+    color: var(--colorBlack);
+  }
+}

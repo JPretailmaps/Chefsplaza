@@ -1,0 +1,46 @@
+.conversation-search {
+  margin-bottom: 12px;
+  padding: 0 12px;
+  border-radius: 10px;
+  overflow: hidden;
+
+  :global .ant-input-group-wrapper {
+    .ant-input-group-addon {
+      border: none;
+      font-size: 20px;
+      color: var(--colorPrimary);
+      background-color: var(--colorLightBlue);
+    }
+
+    .ant-input {
+      padding: 8px 10px;
+      font-size: 14px;
+      width: 100%;
+      border: none;
+      outline: none;
+      background-color: var(--colorLightBlue);
+      color: var(--colorGrey);
+      font-size: 0.9em;
+      height: 40px;
+      text-align: left;
+    }
+
+    .ant-input:focus::placeholder {
+      text-align: left;
+    }
+  }
+}
+
+
+[data-theme="dark"] .conversation-search {
+  :global .ant-input-group-wrapper {
+
+
+    .ant-input {
+      color: var(--colorBlack);
+      &::placeholder {
+        color: var(--colorBlack);
+      }
+    }
+  }
+}

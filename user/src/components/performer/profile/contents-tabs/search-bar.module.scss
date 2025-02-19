@@ -1,0 +1,45 @@
+.search-bar {
+  display: flex;
+  width: 100%;
+  margin: 0 0 5px;
+  padding: 0 10px;
+  justify-content: space-between;
+  align-items: center;
+
+  .grid-btns {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 12px;
+
+    :global .ant-btn {
+      font-size: 20px;
+      color: var(--colorDarkGrey);
+      border-radius: 3px;
+      background: none;
+      border: none;
+      outline: none;
+      box-shadow: none;
+      padding: 0 5px;
+
+      &.active {
+        color: var(--colorPrimary);
+      }
+    }
+  }
+
+  @media screen and (max-width: 550px) {
+    .grid-btns {
+      gap: 15px;
+
+      :global .ant-btn {
+        padding: 0;
+      }
+
+      a {
+        margin: 0;
+      }
+    }
+  }
+}

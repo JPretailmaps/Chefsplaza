@@ -1,0 +1,64 @@
+@import './variables.scss';
+@import './cubiq.scss';
+@import './global.scss';
+@import './darkmode.scss';
+// @import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+html {
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--colorGrey);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  height: 3px;
+  border-radius: 10px;
+}
+
+body {
+  margin: 0;
+  background-color: var(--colorWhite);
+  color: var(--colorBlack);
+  font-size: 14px;
+  line-height: 23px;
+}
+
+button {
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--colorPrimary);
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+h5 {
+  margin-top: 0;
+  margin-bottom: 0.5em;
+}
+
+
+@media screen and (max-width: 550px) {
+  textarea:focus,
+  input:focus {
+    font-size: 16px !important;
+
+    &:placeholder-shown {
+      font-size: 14px !important;
+    }
+  }
+}

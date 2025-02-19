@@ -1,0 +1,58 @@
+.streaming-content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    object-fit: cover;
+    height: 400px;
+    @media screen and (max-width: 550px) {
+      height: 215px;
+    }
+  }
+
+  .stream-txt-box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: calc(100% - 40px);
+    height: calc(100% - 40px);
+    font-size: 16px;
+    font-weight: 600;
+    padding: 20px;
+    background-color: rgba(65, 65, 65, 0.5);
+    backdrop-filter: blur(10px);
+    color: #fff;
+
+    a {
+      color: #fff;
+    }
+
+    :global  {
+      .ant-divider-horizontal.ant-divider-with-text {
+        min-width: unset;
+        width: 60%;
+      }
+      .anticon {
+        font-size: 26px;
+        color: #fff;
+      }
+  
+      .ant-btn.secondary {
+        border: 0;
+        &:hover {
+          opacity: 0.5 ;
+          color: var(--colorWhite);;
+        }
+      }
+    }
+  }
+}

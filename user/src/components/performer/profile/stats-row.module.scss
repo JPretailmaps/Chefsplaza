@@ -1,0 +1,27 @@
+.stats-row {
+  display: inline-flex;
+  padding: 5px 15px;
+  // position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+  color: #fff;
+  @media screen and (max-width: 550px) {
+    bottom: unset;
+    top: 0;
+    padding: 5px;
+  }
+
+  .tab-stat {
+    display: inline-flex;
+    align-items: center;
+
+    .tab-item {
+      padding: 3px 7px;
+
+      &:first-child {
+        padding-left: 0;
+      }
+    }
+  }
+}

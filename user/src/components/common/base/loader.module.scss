@@ -1,0 +1,134 @@
+.loading-screen {
+  z-index: 99999;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background: var(--colorWhite);
+  opacity: 0.9;
+  color: var(--colorPrimary);
+  font-size: 30px;
+
+  img {
+    animation-name: loading;
+    animation-duration: 2s;
+    animation-timing-function: ease-out;
+    animation-delay: 0s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-fill-mode: none;
+    animation-play-state: running;
+    text-align: center;
+    height: 300px;
+    height: auto;
+  }
+
+  p {
+    color: var(--colorPrimary);
+    font-size: 16px;
+  }
+
+  /* HTML: <div class="loader"></div> */
+  .loader {
+    width: 60px;
+    aspect-ratio: 1;
+    display: grid;
+    grid: 50%/50%;
+    color: #25b09b;
+    --_g: no-repeat linear-gradient(currentColor 0 0);
+    background: var(--_g), var(--_g), var(--_g);
+    background-size: 50.1% 50.1%;
+    animation:
+      l6-0 1.5s infinite steps(1) alternate,
+      l6-0-0 3s infinite steps(1);
+  }
+
+  .loader::before {
+    content: "";
+    background: currentColor;
+    transform: perspective(150px) rotateY(0deg) rotateX(0deg);
+    transform-origin: bottom right;
+    animation: l6-1 1.5s infinite linear alternate;
+  }
+
+  &.active {
+    display: flex;
+  }
+
+}
+
+@keyframes loading {
+  0% {
+    font-size: 25px;
+    width: 300px;
+  }
+
+  25% {
+    width: 310px;
+    font-size: 27px;
+  }
+
+  50% {
+    width: 320px;
+    font-size: 30px;
+  }
+
+  75% {
+    width: 310px;
+    font-size: 27px;
+  }
+
+  100% {
+    width: 300px;
+    font-size: 25px;
+  }
+}
+
+
+@keyframes l6-0 {
+  0% {
+    background-position: 0 100%, 100% 100%, 100% 0
+  }
+
+  33% {
+    background-position: 100% 100%, 100% 100%, 100% 0
+  }
+
+  66% {
+    background-position: 100% 0, 100% 0, 100% 0
+  }
+}
+
+@keyframes l6-0-0 {
+  0% {
+    transform: scaleX(1) rotate(0deg)
+  }
+
+  50% {
+    transform: scaleX(-1) rotate(-90deg)
+  }
+}
+
+@keyframes l6-1 {
+  16.5% {
+    transform: perspective(150px) rotateX(-90deg) rotateY(0deg) rotateX(0deg);
+    filter: grayscale(0.8)
+  }
+
+  33% {
+    transform: perspective(150px) rotateX(-180deg) rotateY(0deg) rotateX(0deg)
+  }
+
+  66% {
+    transform: perspective(150px) rotateX(-180deg) rotateY(-180deg) rotateX(0deg)
+  }
+
+  100% {
+    transform: perspective(150px) rotateX(-180deg) rotateY(-180deg) rotateX(-180deg);
+    filter: grayscale(0.8)
+  }
+}

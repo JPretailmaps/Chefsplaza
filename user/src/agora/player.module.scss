@@ -1,0 +1,21 @@
+.publisher-player {
+  width: 100%;
+  max-width: 100%;
+  display: block;
+  position: relative;
+
+  :global {
+    .video-js:not(.vjs-audio-only-mode) {
+      padding-top: 65% !important;
+
+      @media screen and (max-width: 550px) {
+        padding-top: 0 !important;
+        height: 100vh !important;
+      }
+    }
+  }
+
+  video {
+    object-fit: cover;
+  }
+}

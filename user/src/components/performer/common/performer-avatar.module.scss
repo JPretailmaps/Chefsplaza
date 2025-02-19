@@ -1,0 +1,36 @@
+.creator-grp {
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+
+  .avatar {
+    width: 65px;
+    height: 65px;
+    border: 1px solid var(--colorPrimary);
+  }
+
+  .name-grp {
+    margin-left: 10px;
+    display: inline-flex;
+    flex-direction: column;
+
+    .name {
+      font-size: 15px;
+    }
+
+    .username {
+      font-size: 12px;
+    }
+
+    .anticon {
+      font-size: 14px;
+      margin-left: 2px;
+      color: var(--colorPrimaryLight);
+    }
+
+    &:hover {
+      opacity: 0.9;
+      color: var(--colorPrimary);
+    }
+  }
+}

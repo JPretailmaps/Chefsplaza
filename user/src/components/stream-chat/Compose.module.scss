@@ -1,0 +1,118 @@
+.compose {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  bottom: -1px;
+  left: 0;
+  border-top: 1px solid var(--colorLightBlue);
+
+  @media screen and (max-width: 550px) {
+    bottom: 0;
+    top: auto;
+    width: calc(100% + 60px);
+    border: 0;
+    padding: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+
+  .toolbar-button {
+    color: var(--colorGrey);
+    margin-left: 15px;
+  }
+
+  .toolbar-button:hover {
+    color: var(--colorGrey);
+  }
+
+  .compose-input {
+    flex: 1;
+    border: none;
+    font-size: 14px;
+    height: 48px;
+    background: none;
+    color: var(--colorBlack);
+    padding: 5px 10px;
+    border-radius: 0;
+    resize: none;
+
+    @media screen and (max-width: 550px) {
+      border-radius: 3px;
+      height: 40px;
+      margin: 0 5px 0 0;
+      color: #fff;
+
+      &::placeholder {
+        color: #ddd;
+      }
+    }
+  }
+
+  .grp-icons {
+    padding: 0 10px;
+    cursor: pointer;
+    position: relative;
+    font-size: 22px;
+    color: var(--colorGrey);
+
+    :global .emoji-picker {
+      visibility: hidden;
+      opacity: 0;
+      z-index: -1;
+      bottom: 100%;
+      right: -200px;
+      position: absolute;
+      transition: opacity 0.5s ease-in-out;
+    }
+
+    &:hover {
+      :global .emoji-picker {
+        visibility: visible;
+        opacity: 1;
+        z-index: 1;
+
+        @media screen and (max-width: 550px) {
+          right: -15px;
+        }
+      }
+    }
+  }
+
+  .grp-send {
+    background: var(--colorPrimaryLight);
+    width: 47px;
+    height: 47px;
+    line-height: 47px;
+    text-align: center;
+    padding: 0;
+
+    @media screen and (max-width: 550px) {
+      border-radius: 3px;
+    }
+
+    [class~='anticon'] {
+      font-size: 18px;
+      color: #fff;
+      transform: rotate(-45deg);
+    }
+
+    &:hover {
+      background: var(--colorPrimary);
+    }
+  }
+}
+
+[data-theme="dark"] .compose {
+  @media screen and (max-width: 550px) {
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+
+  .compose-input {
+    color: #fff;
+    background-color: transparent;
+  }
+
+  .grp-icons {
+    color: #fff;
+  }
+}

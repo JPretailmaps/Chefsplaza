@@ -1,0 +1,12 @@
+.main-header {
+  padding: 0;
+  border-bottom: 1px solid var(--colorLightGrey);
+  background-color: var(--colorWhite);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 99;
+  height: 50px;
+  line-height: 50px;
+}

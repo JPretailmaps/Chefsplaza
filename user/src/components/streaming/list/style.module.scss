@@ -1,0 +1,72 @@
+.stream-active-grp {
+  @media (max-width: 550px) {
+    padding-top: 8px;
+  }
+  .title {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 0;
+    margin-bottom: 5px;
+    .txt {
+      font-size: 18px;
+      color: var(--colorGrey);
+      font-weight: 500;
+    }
+    a {
+      font-size: 12px;
+      color: var(--colorSecondary);
+    }
+  }
+
+  .stream-list {
+    overflow: auto;
+    width: 100%;
+    padding: 10px 0 15px 0;
+    margin-bottom: 15px;
+    display: flex;
+    border-bottom: 1px solid var(--colorLightGrey);
+  }
+}
+
+.stream-card {
+  .blink-border {
+    width:calc( 100% + 10px);
+    height: calc( 100% + 10px);
+    border-radius: 50%;
+    position: absolute;
+    top: -3px;
+    left: -3px;
+    background: linear-gradient(90deg, var(--colorOrange) 10%, var(--colorSecondary) 50%, var(--colorError) 90%);
+  }
+
+  cursor: pointer;
+  margin-right: 10px;
+  text-align: center;
+  position: relative;
+  width: 65px;
+  height: 65px;
+  margin-left: 3px;
+  .per-avatar {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    position: relative;
+    border: 2px solid white;
+  }
+
+  .live-tag {
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    background: linear-gradient(90deg, var(--colorSecondary) 10%, var(--colorError) 90%);
+    color: #fff;
+    padding: 0 5px;
+    border-radius: 7px;
+    border: 2px solid var(--colorWhite);
+    font-size: 11px;
+    line-height: 17px;
+  }
+}

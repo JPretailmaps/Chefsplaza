@@ -1,0 +1,128 @@
+.message-upload-list {
+  padding: 32px 10px 10px;
+  position: relative;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+
+  .close-btn {
+    position: absolute;
+    right: 0;
+    top: 0;
+    border: none;
+    background: transparent;
+    color: var(--colorBlack);
+  }
+
+  .f-upload-item {
+    position: relative;
+    background-color: var(--colorGray);
+    background-position: center;
+    background-size: cover;
+    height: 165px;
+    width: 110px;
+    border-radius: 5px;
+    overflow: hidden;
+    flex-shrink: 0;
+
+    :global .ant-progress {
+      position: absolute;
+      left: 5px;
+      bottom: 0;
+      width: 100%;
+      margin: 0;
+      margin-inline: 0;
+    }
+
+    :global .ant-progress-inner {
+      height: 6px;
+    }
+
+    :global .ant-image {
+      width: 100%;
+      height: 100%;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    .f-upload-preview-vid {
+      height: 100%;
+      width: 100%;
+      padding: 0;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+
+      :global .anticon {
+        font-size: 40px;
+        color: #fff;
+      }
+
+      &:hover {
+        opacity: 0.6;
+      }
+    }
+
+    .f-upload-name {
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+      width: 120px;
+    }
+
+    .f-upload-size {
+      font-size: 8px;
+    }
+
+    .f-remove {
+      position: absolute;
+      right: 2px;
+      top: 2px;
+      border: none;
+
+      :global .ant-btn-primary {
+        border-radius: 0;
+        background-color: #000;
+        border: none;
+        border-radius: 0 6px;
+      }
+    }
+  }
+
+  .add-more {
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    background-color: rgba(76, 173, 234, 0.1);
+    border-radius: 5px;
+    border: 1.5px dashed var(--colorPrimary);
+    cursor: pointer;
+
+    :global .ant-upload {
+      height: 165px;
+      width: 110px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+    }
+
+    :global .anticon {
+      font-size: 40px;
+      color: var(--colorPrimary);
+      margin: auto;
+    }
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}

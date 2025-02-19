@@ -1,0 +1,105 @@
+.feed-card {
+  margin-bottom: 25px;
+  border-bottom: 0.5px solid var(--colorLightGrey);
+
+  .feed-top {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 0 10px 0;
+
+    .feed-top-left {
+      cursor: pointer;
+      display: flex;
+      position: relative;
+
+      img {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+      }
+
+      .feed-name {
+        padding: 0 10px;
+
+        .name {
+          font-size: 14px;
+          margin: 0;
+          text-transform: capitalize;
+          display: inline-flex;
+          align-items: center;
+          color: var(--colorPrimary);
+
+          [class~="anticon"] {
+            margin-left: 2px;
+            font-size: 16px;
+          }
+        }
+
+        .username {
+          font-size: 13px;
+          color: var(--colorGrey);
+          margin: 0;
+        }
+      }
+
+      .online-status {
+        width: 8px;
+        height: 8px;
+        background-color: var(--colorGray);
+        border-radius: 50%;
+        position: absolute;
+        bottom: 12px;
+        left: 34px;
+
+        &.active {
+          background-color: var(--colorSuccess);
+        }
+      }
+    }
+
+    .feed-top-right {
+      .feed-time {
+        font-size: 11px;
+        color: var(--colorGrey);
+        margin: 0 10px;
+        white-space: nowrap;
+        text-align: right;
+      }
+
+      .dropdown-options {
+        font-size: 14px;
+        color: var(--colorGrey);
+      }
+    }
+  }
+
+  .feed-container {
+    .feed-text {
+      margin: 10px 0;
+      font-size: 13px;
+      white-space: pre-line;
+      overflow-wrap: break-word;
+
+      &::first-letter {
+        text-transform: capitalize;
+      }
+    }
+  }
+
+  .feed-actions {
+    display: flex;
+    width: 100%;
+    padding: 5px 0;
+
+    .action-item {
+      width: 100%;
+      align-items: center;
+      display: flex;
+
+      &:last-child {
+        justify-content: flex-end;
+        width: 25%;
+      }
+    }
+  }
+}

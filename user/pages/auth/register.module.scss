@@ -1,0 +1,89 @@
+.welcome-box {
+  display: flex;
+  align-items: center;
+  min-height: 90vh;
+  gap: 60px;
+
+  .content-left {
+    padding: 20px 30px;
+    width: 50%;
+    position: relative;
+    min-height: 75vh;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    @media (max-width: 550px) {
+      display: none;
+    }
+  }
+
+  .content-right {
+    padding: 20px 30px;
+    width: 50%;
+
+    @media (max-width: 550px) {
+      padding: 0;
+      width: 100%;
+    }
+  }
+
+  .welcome-content {
+    padding: 20px;
+    border-radius: 10px;
+    background-color: var(--colorLightGrey);
+    color: var(--colorBlack);
+
+    h3 {
+      font-size: 25px;
+      font-weight: 800;
+      color: var(--colorGrey);
+      margin: 0;
+      margin-bottom: 20px;
+    }
+
+    ul {
+      padding-left: 20px;
+
+      li {
+        list-style: unset;
+        line-height: min(30px);
+      }
+    }
+  }
+
+  .switch-btn {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px;
+
+    :global .ant-btn {
+      font-size: 16px;
+      font-weight: 700;
+      padding-bottom: 10px;
+      border-radius: 0;
+      border: none;
+      outline: none;
+      box-shadow: none;
+      background: transparent;
+      color: var(--colorBlack);
+      height: auto;
+
+      &.ant-btn-primary {
+        color: var(--colorPrimary) !important;
+        background-color: transparent;
+        border-bottom: 2px solid var(--colorPrimary);
+        background-color: unset !important;
+      }
+
+      &:hover {
+        color: var(--colorPrimary) !important;
+        background: none;
+      }
+    }
+  }
+}

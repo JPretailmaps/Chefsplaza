@@ -1,0 +1,58 @@
+.message-slider {
+  position: relative;
+
+  .message-video-container {
+    position: relative;
+    margin: 0;
+    transition: all 0.5s ease-in-out;
+    overflow: hidden;
+    width: 500px;
+    max-width: 100%;
+
+    .blur-content {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      // filter: blur(10px) opacity(80%);
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+      }
+    }
+
+    .message-video-content {
+      width: 100%;
+      height: 100%;
+
+      video-js {
+        background: unset;
+
+        video {
+          object-fit: contain;
+        }
+      }
+
+    }
+
+    .processing {
+      background-image: url("/leaf.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      display: flex;
+      width: 100%;
+      height: 40vh;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      font-weight: 600;
+    }
+  }
+}

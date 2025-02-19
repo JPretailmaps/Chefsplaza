@@ -1,0 +1,21 @@
+.action-ico.action-btn {
+  padding: 5px 10px;
+  background-color: transparent;
+  border: unset;
+  outline: none;
+  box-shadow: none;
+  color: var(--colorBlack);
+
+  :global .anticon {
+    font-size: 20px;
+  }
+
+  &:disabled {
+    background-color: transparent
+  }
+
+  &:hover,
+  &.active {
+    color: var(--colorPrimaryLight);
+  }
+}

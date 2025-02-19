@@ -1,0 +1,25 @@
+.banner-carousel {
+  margin-bottom: 20px;
+  :global .slick-arrow {
+    background-color: var(--colorBlack) !important;
+    color: var(--colorWhite) !important;
+    height: 28px;
+    width: 28px;
+    line-height: 30px;
+    opacity: 0.6;
+    font-size: 14px;
+    z-index: 2;
+
+    &.slick-prev {
+      inset-inline-start: 0px;
+    }
+
+    &.slick-next {
+      inset-inline-end: 0px;
+    }
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
